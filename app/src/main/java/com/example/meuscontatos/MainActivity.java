@@ -36,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
         loadContatos();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadContatos();
+    }
+
     private void loadContatos(){
         ContatoDAO contatoDAO = new ContatoDAO(this);
 
