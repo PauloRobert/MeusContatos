@@ -18,12 +18,18 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
         EditText etNome = findViewById(R.id.etNome);
+        EditText etTelefone = findViewById(R.id.etTelefone);
         Button btnSalvar = findViewById(R.id.btnSalvar);
 
         btnSalvar.setOnClickListener(v -> {
             String nome = etNome.getText().toString().trim();
+            String telefone = etTelefone.getText().toString().trim();
             if (nome.isEmpty()) {
                 Toast.makeText(this, "Digite o nome", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (telefone.length() < 10 || telefone.length() > 11) {
+                Toast.makeText(this, "Telefone deve ter 10 ou 11 dígitos", Toast.LENGTH_SHORT).show();
                 return;
             }
             Contato contato = new Contato(0, nome, telefone);
