@@ -43,6 +43,8 @@ public class ContatoAdapter extends BaseAdapter {
         Contato contato = contatos.get(i);
         TextView tvContatoLista = view.findViewById(R.id.tvContatoLista);
         tvContatoLista.setText(contato.getNome());
+        TextView tvTelefone = view.findViewById(R.id.tvContatoTelefone);
+        tvTelefone.setText(contato.getTelefone());
 
         return view;
     }
