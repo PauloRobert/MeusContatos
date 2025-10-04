@@ -23,6 +23,7 @@ public class ContatoDAO {
     public void inserirContato(Contato contato) {
         ContentValues values = new ContentValues();
         values.put(DbHelper.CONTATOS_NOME, contato.getNome());
+        values.put(DbHelper.CONTATOS_TELEFONE, contato.getTelefone());
 
         db.insert(DbHelper.TABLE_CONTATOS_NAME, null, values);
     }
@@ -34,13 +35,15 @@ public class ContatoDAO {
                 new String[]
                         {
                             DbHelper.CONTATOS_ID,
-                            DbHelper.CONTATOS_NOME
+                            DbHelper.CONTATOS_NOME,
+                            DbHelper.CONTATOS_TELEFONE
                         },null, null, null, null, null);
         if (cursor.moveToFirst()) {
             do {
                 int id = cursor.getInt(0);
                 String nome = cursor.getString(1);
-                Contato contato = new Contato(id, nome);
+                String telefone = cursor.getString(2);
+                Contato contato = new Contato(id, nome, telefone);
                 contatos.add(contato);
             } while (cursor.moveToNext());
         }
