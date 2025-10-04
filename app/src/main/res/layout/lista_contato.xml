@@ -22,5 +22,12 @@
             android:layout_marginEnd="16dp"
             android:text="TextView"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tvContatoTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefone"
+            android:textSize="16sp"
+            android:textColor="#555"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
