@@ -11,6 +11,12 @@
         android:layout_height="wrap_content"
         android:hint="@string/nome_do_contato"
         android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/etTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefone (xx xxxxx-xxxx)"
+        android:inputType="phone"/>
 
     <Button
         android:id="@+id/btnSalvar"
