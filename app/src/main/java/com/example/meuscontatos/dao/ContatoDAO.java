@@ -20,7 +20,7 @@ public class ContatoDAO {
         db = dbHelper.getWritableDatabase();
     }
 
-    public void inserir(Contato contato) {
+    public void inserirContato(Contato contato) {
         ContentValues values = new ContentValues();
         values.put(DbHelper.CONTATOS_NOME, contato.getNome());
 
