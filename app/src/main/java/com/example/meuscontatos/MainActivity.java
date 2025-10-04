@@ -1,6 +1,8 @@
 package com.example.meuscontatos;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        Button btnNovo = findViewById(R.id.btnNovoContato);
+        btnNovo.setOnClickListener(v -> startActivity(new Intent(this, CadastroActivity.class)));
         loadContatos();
     }
 
