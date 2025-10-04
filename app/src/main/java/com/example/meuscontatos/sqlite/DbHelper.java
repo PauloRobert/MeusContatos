@@ -10,9 +10,12 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String TABLE_CONTATOS_NAME = "contatos";
     public static final String CONTATOS_ID = "id";
     public static final String CONTATOS_NOME  = "nome";
+    public static final String CONTATOS_TELEFONE = "telefone";
 
     private static final String CREATE_TABLE_CONTATOS = "CREATE TABLE " + TABLE_CONTATOS_NAME + "("
-            + CONTATOS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + CONTATOS_NOME + " TEXT NOT NULL);";
+            + CONTATOS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + CONTATOS_NOME + " TEXT NOT NULL,"
+            + CONTATOS_TELEFONE + " TEXT NOT NULL);";
 
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
