@@ -16,7 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Telefone (xx xxxxx-xxxx)"
-        android:inputType="phone"/>
+        android:inputType="number"
+        android:maxLength="11"
+        android:digits="0123456789"/>
 
     <Button
         android:id="@+id/btnSalvar"
