@@ -26,7 +26,7 @@ public class CadastroActivity extends AppCompatActivity {
                 Toast.makeText(this, "Digite o nome", Toast.LENGTH_SHORT).show();
                 return;
             }
-            Contato contato = new Contato(0, nome);
+            Contato contato = new Contato(0, nome, telefone);
             ContatoDAO dao = new ContatoDAO(this);
             dao.inserirContato(contato);
             Toast.makeText(this, "Contato salvo", Toast.LENGTH_SHORT).show();
