@@ -1,6 +1,8 @@
 # MeusContatos
 
-MeusContatos é um aplicativo Android simples para gerenciar uma lista de contatos. Ele permite que os usuários visualizem, adicionem, editem e excluam contatos. O aplicativo usa um banco de dados SQLite para armazenar os dados de contato.
+MeusContatos é um aplicativo Android simples para gerenciar uma lista de contatos. Ele permite que os usuários visualizem, adicionem contatos. 
+O aplicativo usa um banco de dados SQLite para armazenar os dados de contato.
+Ainda não há uma opção de editar e/ou excluir um contato, isso será desenvolvido posteriormente.
 
 ## Funcionalidades
 
