@@ -9,7 +9,7 @@ public class Contato {
     public Contato(int id, String nome, String telefone) {
         this.id = id;
         this.nome = nome;
-        this.telefone = this.telefone;
+        this.telefone = telefone;
     }
 
     public int getId() {
